@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+
+    
+
+  </head>
+  <body>
+  <h1>Pacific Banking</h1>
+
+  <h2 id="headerName"></h2>
+
+
+  <h2>Accounts for:</h2>
+  First Name: <%= name %>
+
+  <!-- Example of how an account would look.-->
+  <div>
+    <p>Account Name: %%%%%%%%%%%%%% Amount: %%%%%%</p>
+    <select id="action">
+      <option value="deposit">Deposit</option>
+      <option value="withdraw">Withdraw</option>
+      <option value="deleteAccount">Delete Account</option>
+    </select>
+    <input type="number" placeholder="Enter amount">
+    <input type="submit" value="Submit" />
+  </div>
+
+  <div>
+    <p>Account Name: %%%%%%%%%%%%%% Amount: %%%%%%</p>
+    <select id="action">
+      <option value="deposit">Deposit</option>
+      <option value="withdraw">Withdraw</option>
+      <option value="deleteAccount">Delete Account</option>
+    </select>
+    <input type="number" placeholder="Enter amount">
+    <input type="submit" value="Submit" />
+  </div>
+
+  <div>
+    <p>Account Name: %%%%%%%%%%%%%% Amount: %%%%%%</p>
+    <select id="action">
+      <option value="deposit">Deposit</option>
+      <option value="withdraw">Withdraw</option>
+      <option value="deleteAccount">Delete Account</option>
+    </select>
+    <input type="number" placeholder="Enter amount">
+    <input type="submit" value="Submit" />
+  </div>
+
+  <h2>Transfer</h2>
+
+  <!-- Plan would be to pull from DB the user's accounts and information .-->
+
+  <form action="/submitTransfer">
+    <select id="fromAccount"> 
+      <option value="savings">Savings</option>
+      <option value="checking">Checking</option>
+    </select>
+  
+    <input type="number" placeholder="Enter amount">
+  
+    <select id="toAccount">
+      <option value="savings">Savings</option>
+      <option value="checking">Checking</option>
+    </select>
+
+    <input type="submit" value="Transfer" />
+  </form>
+
+
+<br>
+<br>
+<br>
+
+
+  <a href="/logout">Logout</a>
+  </body>
+</html>
+
+

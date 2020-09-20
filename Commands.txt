@@ -1,0 +1,29 @@
+-Connect to db from command line:
+	sudo mysql -u root -p
+
+	CREATE DATABASE Bank;
+
+	USE Bank;
+
+	CREATE TABLE BankUsers (username VARCHAR(20) PRIMARY KEY, password VARCHAR(20), fName VARCHAR(15), lName VARCHAR(15), address VARCHAR(255));
+
+	CREATE TABLE UserAccount (a_name VARCHAR(15) PRIMARY KEY, a_type VARCHAR(15), a_amount NUMERIC(15,2), a_username VARCHAR(20) REFERENCES BankUsers(username));
+
+-Insert into Bank:
+	INSERT INTO BankUsers VALUES('mhail', 'Titans2020', 'mikhail', 'Gof', 'Somewhere Ln, Fullerton Ca');
+-Insert into Accounts:
+	INSERT INTO UserAccount VALUES('Food For Murka', 'Checkings',1000000,'mhail');
+	INSERT INTO UserAccount VALUES('Food For Me', 'Checkings',1000000,'mhail');
+	INSERT INTO UserAccount VALUES('Rent Money', 'Savings',5000000,'mhail');
+
+GRANT ALL PRIVILEGES ON Bank.* TO 'bankuser'@'localhost' IDENTIFIED BY 'bankpass';
+
+exit
+
+mysql -u bankuser -p
+
+-enter password (bankpass)
+
+-select the "BankUsers" db:
+	use Bank;
+	Select * FROM BankUsers;

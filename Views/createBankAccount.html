@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Create checking/saving account</title>
+
+  </head>
+  <body>
+  <h1>Create Checking/Savings account</h1>
+
+  <h3>Please enter the following information:</h3>
+
+  <form action="/createBankAccount" method="POST">
+	 
+	Enter the Name of the Account: <br>
+    <input type="accountName" id="accountName" name="accountName" placeholder="Enter Account Name" pattern=".{1,15}" title="Account name must be 1-15 characters in length" required>
+    <br>
+    <br>
+    
+    Enter the initial amount: <br>
+    <input type="number" id="initialAmount" name="initialAmount" placeholder="initialAmount" step="0.01" min="0.01"  required>
+    <br>
+    <br>
+
+    <select id="accountType" name="accountType" required>
+        <option value="Checking">Checking</option>
+        <option value="Savings">Savings</option>
+      </select>
+
+      <br>
+      <br>
+
+    <input type="submit" value="Create" />
+  </form>
+  <a href="/login">Home</a>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Withdraw</title>
+
+  </head>
+  <body>
+  <h1>Pacific Banking Account Withdraw</h1>
+
+  <h3>Please enter the following information:</h3>
+
+   <form action="/withdraw" method="POST">
+	Enter the account name you are withdrawing from: <br>
+    <input type="accountName" id="accountName" name="accountName" placeholder="Account Withdrawing From" maxlength="15" required>
+    <br>
+    
+    Enter the amount you are Withdrawing: <br>
+    <input type="number" id="withdrawamount" name="withdrawamount" placeholder="Amount" step="0.01" min="0.01" required>
+    <br>
+
+    <input type="submit" value="Withdraw" />
+  </form>
+  
+  <a href="/DirectCreateBankAccount">Create an account</a><br>
+  <a href="/login">Home</a><br>
+
+  </body>
+</html>
